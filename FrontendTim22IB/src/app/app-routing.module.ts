@@ -8,6 +8,7 @@ import { CertificateDownloadComponent } from './Components/certificate-download/
 import { CertificateReviewComponent } from './Components/certificate-review/certificate-review.component';
 import { CheckIfValidComponent } from './Components/check-if-valid/check-if-valid.component';
 import { WidthdrawalComponent } from './Components/widthdrawal/widthdrawal.component';
+import { NewRequsetComponent } from './Components/new-requset/new-requset.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'review', component: CertificateReviewComponent },
   { path: 'validity', component: CheckIfValidComponent },
   { path: 'widthdrawal', component: WidthdrawalComponent },
+  { path: 'newRequest', component: NewRequsetComponent },
 ];
 
 @NgModule({
