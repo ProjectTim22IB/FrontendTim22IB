@@ -9,7 +9,3 @@ export interface Certificate{
     email: string;
 }
 
-export interface CertificateWithdrawal{
-    email: string;
-    reasonOfWithdrawal: string
-}

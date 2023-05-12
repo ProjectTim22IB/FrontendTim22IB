@@ -9,18 +9,20 @@ export interface CertificateRequest{
     reasonOfRejection: string;
 }
 
-export interface CertificateRequestDTO{
+export interface RequestCertificateDTO{
     issuerSerialNumber: string;
     requestDate: string;
     type: string;
     email: string;
 }
 
-export interface ApprovalOfRequest{
+export interface ApprovalOfRequestDTO{
     approved: boolean;
     reasonOfRejection: string;
     issuerEmail: string;
 }
 
-
-
+export interface CertificateWithdrawalDTO{
+    email: string;
+    reasonOfWithdrawal: string
+}
