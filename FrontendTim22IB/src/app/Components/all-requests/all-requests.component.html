@@ -1,0 +1,26 @@
+<div class="container " style="margin-top: 10%;">
+    <div class="row ">
+        <table>
+            <tbody *ngFor="let requests of this.taskArray">
+                <tr>
+                    <td>
+                        <div class="col-4 w3-third" id="demo">
+                            <div class="card mb-5" style="width:25rem;">
+                                <div class="card-body">
+                                    <h2 class="card-title" class="fw-bolder">Issuer serial number {{ requests.column1.issuerSerialNumber }}</h2>
+                                    <p class="card-text">Certificate type:</p>
+                                    <p class="card-text">Issuer email:</p>
+                                    <p class="card-text">Request date:</p>
+                                    <p class="card-text">Status: </p>
+                                    <p class="card-text">Reason of rejection: </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

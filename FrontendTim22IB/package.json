@@ -18,6 +18,13 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+<<<<<<< Updated upstream
+=======
+    "@auth0/angular-jwt": "^5.1.2",
+    "bootstrap": "^5.2.3",
+    "cors": "^2.8.5",
+    "jwt-decode": "^3.1.2",
+>>>>>>> Stashed changes
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
