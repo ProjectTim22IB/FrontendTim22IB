@@ -58,13 +58,6 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "FrontendTim22IB:build",
-            "ssl": true,
-            "sslKey": "C:/Users/Svetozar/Desktop/DRUGI SEMESTAR/Informaciona bezbednost/Projekat/BackendTim22IB/src/main/java/com/example/keystores/123.pem",
-            "sslCert": "C:/Users/Svetozar/Desktop/DRUGI SEMESTAR/Informaciona bezbednost/Projekat/BackendTim22IB/src/main/java/com/example/keystores/123_crt.pem",
-            "port": 8084
-          },
           "configurations": {
             "production": {
               "browserTarget": "FrontendTim22IB:build:production"
