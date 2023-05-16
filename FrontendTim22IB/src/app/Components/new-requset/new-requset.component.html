@@ -2,6 +2,9 @@
     <div style="margin-top: 20%;">
         <label for="myfile">Request certificate</label><br>
         <input type="text" value="Enter serial number"/><br>
-        <input type="submit" value="Submit">
+        <input type="text" value="Enter certificate type"/><br> 
+        <form (ngSubmit)="newRequest()">
+            <button class="btn row" id="btn" type="submit">Send</button>
+          </form>
     </div>
 </div>

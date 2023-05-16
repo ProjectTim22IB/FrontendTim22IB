@@ -1,19 +1,19 @@
 export interface CertificateRequest{
     id: number;
+    type: string;
+    email: string;
     issuerSerialNumber: string;
     requestDate: string;
     status: string;
-    type: string;
-    email: string;
     issuerEmail: string;
     reasonOfRejection: string;
 }
 
-export interface RequestCertificateDTO{
-    issuerSerialNumber: string;
-    requestDate: string;
+export interface CertificateRequestDTO{
     type: string;
     email: string;
+    issuerSerialNumber: string;
+    requestDate: string;
 }
 
 export interface ApprovalOfRequestDTO{

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApprovalOfRequestDTO, CertificateRequest } from 'src/app/Model/CertificateRequest';
+import { ApprovalOfRequestDTO, CertificateRequestDTO } from 'src/app/Model/CertificateRequest';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class CertificateCertificateService {
 
   constructor(private http: HttpClient) { }
 
-  requestCertificate(request: CertificateRequest): Observable<any> {
+  requestCertificate(request: CertificateRequestDTO): Observable<any> {
     return this.http.post<any>(environment.apiHost + "api/certificateRequest/newRequest", request);
   }
 
