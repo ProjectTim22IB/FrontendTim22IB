@@ -1,7 +1,9 @@
 <div class="container">
     <div style="margin-top: 20%;">
+        <form [formGroup]="withdrawalForm" (ngSubmit)="withdraw()">
         <label for="myfile">Withdrawal of certificate</label><br>
-        <input type="text" value="Enter serial number"/><br>
-        <input type="submit" value="Submit">
+        <input type="text"  formControlName="serialNumber" value="Enter serial number"/><br>
+        <button class="btn row" id="btn" type="submit">Send</button>
+          </form>
     </div>
 </div>

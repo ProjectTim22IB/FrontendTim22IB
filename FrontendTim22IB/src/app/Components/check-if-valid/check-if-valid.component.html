@@ -1,14 +1,19 @@
 <div class="container">
     <div style="margin-top: 20%;">
+        <form (ngSubmit)="check1()"></form>
         <label for="myfile">Check validity by serial number</label><br>
         <input type="text" value="Enter serial number"/><br>
-        <input type="submit" value="Check">
+        <button type="submit">Check</button>
+                       
     </div>
+
     <div style="margin: 5%;">or</div>
-    <form action="/action_page.php">
+   
+    <form (ngSubmit)="check2()">
         <label for="myfile">Check validity by copy</label><br>
         <input type="file" id="myfile" name="myfile"><br>
-        <input type="submit" value="Check">
+        <button type="submit">Check</button>
+                       
       </form>
 
 </div>

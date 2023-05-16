@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CertificateRequest } from 'src/app/Model/CertificateRequest';
+import { FormGroup, FormControl } from '@angular/forms';
+import { ApprovalOfRequestDTO, CertificateRequest } from 'src/app/Model/CertificateRequest';
 import { CertificateCertificateService } from 'src/app/Service/CertificateRequest/certificate-certificate.service';
 
 @Component({
@@ -33,6 +34,39 @@ export class AcceptDeclineRequestsComponent implements OnInit {
       });
     }
   }
+
+  acceptDeclineForm = new FormGroup({
+    issuerEmail: new FormControl(''),
+    requestId: new FormControl('')
+  })
+
+  accept(): void{
+    const approval: ApprovalOfRequestDTO = {
+      approved: true,
+      issuerEmail: this.acceptDeclineForm.value.issuerEmail!,
+      reasonOfRejection: " "
+    }
+    
+    this.certificateRequestService.acceptanceOfRequest(this.acceptDeclineForm.value.requestId!.toString(), approval).subscribe((requests2) => {
+      this.requests = requests2;
+      this.generateSmartTable();
+    });
+    
+  }
+
+  decline(): void{
+    const approval: ApprovalOfRequestDTO = {
+      approved: false,
+      issuerEmail: this.acceptDeclineForm.value.issuerEmail!,
+      reasonOfRejection: "treba dodati ovo"
+    }
+    
+    this.certificateRequestService.acceptanceOfRequest(this.acceptDeclineForm.value.requestId!.toString(), approval).subscribe((requests2) => {
+      this.requests = requests2;
+      this.generateSmartTable();
+    });
+  }
+
 }
 
 export interface RequestsContent {

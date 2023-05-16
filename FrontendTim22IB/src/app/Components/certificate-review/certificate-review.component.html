@@ -9,11 +9,10 @@
                             <div class="card mb-5" style="width:25rem;">
                                 <div class="card-body">
                                     <h2 class="card-title" class="fw-bolder">Serial number {{ certificates.column1.serialNumber }}</h2>
-                                    <p class="card-text">Certificate type:</p>
-                                    <p class="card-text">Valid from:</p>
-                                    <p class="card-text">Valid to:</p>
-                                    <p class="card-text">Status: </p>
-
+                                    <p class="card-text">Certificate type: {{certificates.column1.certificateType}}</p>
+                                    <p class="card-text">Valid from: {{certificates.column1.validFrom}}</p>
+                                    <p class="card-text">Valid to: {{certificates.column1.validTo}}</p>
+                                    <p class="card-text">Status: {{certificates.column1.status}}</p>
                                 </div>
                             </div>
                         </div>

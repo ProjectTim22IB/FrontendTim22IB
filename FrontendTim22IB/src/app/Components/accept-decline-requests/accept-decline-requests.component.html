@@ -6,14 +6,20 @@
         <div class="col-4 w3-third" id="demo"> 
             <div class="card mb-5" style="width:25rem;">
                 <div class="card-body">
-                    <h2 class="card-title" class="fw-bolder" >Issuer serial number {{requests.column1.issuerSerialNumber}}</h2>
-                    <p class="card-text">Certificate type:</p>
-                    <p class="card-text">Issuer email:</p>
-                    <p class="card-text">Request date:</p>
-                    <p class="card-text">Status: </p>
+                    <form [formGroup]="acceptDeclineForm"></form>
+                    <h2 class="card-title"  class="fw-bolder" >Issuer serial number {{requests.column1.issuerSerialNumber}}</h2>
+                    <p class="card-text" formControlName="requestId" >Request id: {{requests.column1.id}}</p>
+                    <p class="card-text" >Certificate type: {{requests.column1.type}}</p>
+                    <p class="card-text" formControlName="issuerEmail">Issuer email: {{requests.column1.issuerEmail}}</p>
+                    <p class="card-text" >Request date: {{requests.column1.requestDate}}</p>
+                    <p class="card-text" >Status: {{requests.column1.status}}</p>
                     <div>
-                        <button>Accept</button>
-                        <button>Decline</button>
+                        <form (ngSubmit)="accept()">
+                            <button type="submit">Accept</button>
+                        </form>
+                        <form (ngSubmit)="decline()">
+                            <button type="submit">Decline</button>
+                        </form>
                     </div>
                     
                     

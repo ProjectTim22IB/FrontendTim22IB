@@ -1,10 +1,18 @@
 <div class="container">
     <div style="margin-top: 20%;">
-        <label for="myfile">Request certificate</label><br>
-        <input type="text" value="Enter serial number"/><br>
-        <input type="text" value="Enter certificate type"/><br> 
-        <form (ngSubmit)="newRequest()">
+        <form [formGroup]="requestForm" (ngSubmit)="newRequest()">
+            <label for="myfile">Request certificate</label><br>
+            <input type="text" formControlName="issuerSerialNumber" value="Enter serial number" /><br>
+            <label for="certs">Enter certificate type:</label>
+
+            <select formControlName="type" id="certs">
+                <option value="root">Root</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="end">End</option>
+
+            </select>
+            <br />
             <button class="btn row" id="btn" type="submit">Send</button>
-          </form>
+        </form>
     </div>
 </div>

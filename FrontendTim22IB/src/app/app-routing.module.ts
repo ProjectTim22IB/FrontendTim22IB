@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'download', component: CertificateDownloadComponent },
   { path: 'review', component: CertificateReviewComponent },
   { path: 'validity', component: CheckIfValidComponent },
-  { path: 'widthdrawal', component: WidthdrawalComponent },
+  { path: 'withdrawal', component: WidthdrawalComponent },
   { path: 'newRequest', component: NewRequsetComponent },
 ];
 
